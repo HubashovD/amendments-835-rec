@@ -1,0 +1,305 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "chipUid",
+                "title": "Індивідуальний номер тварини, вказаний на чіпі",
+                "description": "Вказується унікальний ідентифікатор чипу (бірки), який було нанесено на тварину",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "catchName",
+                "title": "Назва юридичної особи, яка здійснила відлов тварини",
+                "description": "Назва юридичної особи, яка здійснила відлов тварини. Наприклад: КП «Містсервіс»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "catchId",
+                "title": "Код ЄДРПОУ юридичної особи, яка здійснила відлов тварини",
+                "description": "Код ЄДРПОУ юридичної особи, яка здійснила відлов тварини. Наприклад: 01411082",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureDate",
+                "title": "Дата відлову",
+                "description": "Дата, коли було відловлено тварину, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "captureCATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси будівлі, біля якої було відловлено тварину. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва країни. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону, в якому було відловлено тварину. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району, в якому було відловлено тварину. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "captureAddressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади, в якій було відловлено тварину. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "captureAddressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо, на якому було відловлено тварину. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressLocatorDesignator",
+                "title": "Номер будівлі",
+                "description": "Номер будівлі (об’єкта), біля якого було відловлено тварину, може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "captureAddressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу будівлі, біля якої було відловлено тварину, зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "captureAddressDescription",
+                "title": "Опис місця відлову",
+                "description": "Опис вказується за потреби, щоб чіткіше визначити розміщення. Наприклад: Центральна алея",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "captureLat",
+                "title": "Географічна широта",
+                "description": "Географічна широта місця, в якому було відновлено тварину. Розділювач десяткових значень — крапка. Наприклад: 50.457718. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "captureLon",
+                "title": "Географічна довгота",
+                "description": "Географічна довгота місця, в якому було відновлено тварину. Розділювач десяткових значень — крапка. Наприклад: 30.487021. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "animalSpecies",
+                "title": "Вид тварини",
+                "description": "Вказується біологічний вид тварини. Наприклад: собака, кіт тощо",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "animalBreed",
+                "title": "Порода тварини",
+                "description": "Вказується порода тварини відповідно до міжнародних класифікаторів, якщо можливо визначити. Наприклад: Австралійський Келпі. \nЯкщо породу визначити неможливо, вказується: визначити неможливо",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "animalSex",
+                "title": "Стать тварини",
+                "description": "Вказується відповідно до міжнародної класифікації: Стать зазначається цифрами відповідно до стандарту ISO/IEC 5218:2004: 0 — невідомо, 1 — самець, 2 — самка, 9 — не застосовується. Наприклад: 1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "aminalColour",
+                "title": "Окрас тварини",
+                "description": "Вказується окрас тварини. Наприклад: чорно-сірий.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "animalFur",
+                "title": "Тип шерсті тварини",
+                "description": "Вказується тип шерсті тварини. Наприклад: короткошерста",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "animalHeight",
+                "title": "Висота тварини в холці",
+                "description": "Вказується висота тварини в холці, в сантиметрах. Наприклад: 51",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "animalWeight",
+                "title": "Вага тварини",
+                "description": "Вказується вага тварини в кілограмах. Наприклад: 20",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "vaccinationsInfo",
+                "title": "Дані про зроблені щеплення",
+                "description": "Вказується інформація про хвороби, від яких були зроблені щеплення. Якщо щеплення було зроблено від кількох хвороб, значення розділяються комою. Наприклад: сказ, чума, лептоспіроз",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "isSterilizationInfo",
+                "title": "Інформація про стерилізацію",
+                "description": "Вказується, чи було стерилізовано тварину. Якщо так, вказується True, якщо ні – False. Наприклад: True",
+                "datatype": "boolean",
+                "required": true
+            },
+            {
+                "name": "veterinaryName",
+                "title": "Назва юридичної особи, яка проводила медичні маніпуляції із твариною",
+                "description": "Назва юридичної особи, яка проводила медичні маніпуляції із твариною. Наприклад: КП «Містсервіс»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "veterinaryId",
+                "title": "Код ЄДРПОУ юридичної особи, яка яка проводила медичні маніпуляції із твариною",
+                "description": "Код ЄДРПОУ юридичної особи, яка проводила медичні маніпуляції із твариною. Наприклад: 01411082",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releasedDate",
+                "title": "Дата, коли тварину було відпущено",
+                "description": "Дата, коли було відпущено тварину, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "releaseCATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс місця, в якому відпущено тварину. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва країни. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону, в якому відпущено тварину. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району, в якому відпущено тварину.  Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "releaseAddressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади, в якій відпущено тварину. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "releaseAddressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо, де відпущено тварину. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressLocatorDesignator",
+                "title": "Номер будівлі",
+                "description": "Номер будівлі, біля якої відпущено тварину. Номер будівлі (об’єкта) може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "releaseAddressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу, біля якого відпущено тварину, зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "releaseAddressDescription",
+                "title": "Опис розміщення",
+                "description": "Опис місця, в якому відпущено тварину. Опис вказується за потреби, щоб чіткіше визначити розміщення. Наприклад: Центральна алея",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "releaseLat",
+                "title": "Географічна широта",
+                "description": "Географічна широта місця, де відпущено тварину. Розділювач десяткових значень — крапка. Наприклад: 50.457718. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "releaseLon",
+                "title": "Географічна довгота",
+                "description": "Географічна довгота місця, де відпущено тварину. Розділювач десяткових значень — крапка. Наприклад: 30.487021. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": ""
+}

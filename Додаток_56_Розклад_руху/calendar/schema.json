@@ -1,0 +1,81 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "serviceUid",
+                "title": "Ідентифікатор",
+                "description": "Ідентифікатор тижневого графіка роботи маршруту громадського транспорту. Ідентифікатором може бути довільна послідовність літер та чисел. Наприклад: пн-вт-ср-чт-пт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "monday",
+                "title": "Понеділок",
+                "description": "Якщо маршрут функціонує в понеділок, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "tuesday",
+                "title": "Вівторок",
+                "description": "Якщо маршрут функціонує у вівторок, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "wednesday",
+                "title": "Середа",
+                "description": "Якщо маршрут функціонує в середу, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "thursday",
+                "title": "Четвер",
+                "description": "Якщо маршрут функціонує в четвер, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "friday",
+                "title": "П’ятниця",
+                "description": "Якщо маршрут функціонує в п’ятницю, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "saturday",
+                "title": "Субота",
+                "description": "Якщо маршрут функціонує в суботу, вказати 1, якщо ні – 0. Наприклад: 0",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "sunday",
+                "title": "Неділя",
+                "description": "Якщо маршрут функціонує в неділю, вказати 1, якщо ні – 0. Наприклад: 1",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "startDate",
+                "title": "Початок дії графіку",
+                "description": "Дата початку дії графіка у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-06-01",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "endDate",
+                "title": "Завершення дії графіку",
+                "description": "Дата завершення дії графіка у форматі ISO 8601 (рррр-мм-дд). Цей день включається в інтервал. Наприклад: 2018-08-31",
+                "datatype": "date",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "serviceUid"
+}

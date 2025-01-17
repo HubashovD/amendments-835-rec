@@ -1,0 +1,67 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "normsNumber",
+                "title": "Державні будівельні норми",
+                "description": "Номер державних будівельних норм, на відповідність яким проводиться перевірка або моніторинг. Наприклад: ДБН В.2.2-40:2018",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "paragraphNumber",
+                "title": "Номер пункту",
+                "description": "Номер пункту державних будівельних норм. Наприклад: 5.3.2",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "paragraphDescription",
+                "title": "Норма",
+                "description": "Норма, що визначена пунктом (допустимий скорочений виклад). Наприклад: Зовнішні пандуси повинні мати двобічне огородження з поручнями",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Стан відповідності",
+                "description": "Стан відповідності об’єкта вимогам норми.  Якщо так, вказується True, якщо ні – False. Наприклад: True ",
+                "datatype": "boolean",
+                "required": true
+            },
+            {
+                "name": "description",
+                "title": "Опис",
+                "description": "Опис може містити примітки, виявлені розміри, відхилення тощо. Наприклад: Пандус огороджений поручнем лише з правого боку",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "image",
+                "title": "Фото",
+                "description": "Посилання на фото елемента будівлі або споруди, якого стосуються вимоги норми (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/photo.png. Якщо фото відсутнє, вказати: null",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "buildingUid",
+                "title": "Ідентифікатор об’єкта",
+                "description": "Ідентифікатор будинку або споруди атрибут uid з таблиці buildings. Наприклад: 0015",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "buildingName",
+                "title": "Назва об’єкта",
+                "description": "Назва будинку або споруди з таблиці Buildings. Наприклад: Головний корпус Поліклініки №1",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "normsNumber"
+}

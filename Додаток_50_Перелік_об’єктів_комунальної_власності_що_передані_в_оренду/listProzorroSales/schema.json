@@ -1,0 +1,32 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ocid",
+                "title": "Код",
+                "description": "Унікальний код об’єкта, присвоєний торговою системою. Наприклад: UA-AR-P-2019-01-01-000111-1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Назва об’єкта. Наприклад: Підвальне приміщення",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на веб-сторінку з інформацією про об’єкт на ProZorro.Продажі або електронному майданчику. Наприклад: https://prozorro.sale/ssp_object/UA-AR-P-2019-01-01-000001-1",
+                "datatype": "anyURL",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "ocid"
+}

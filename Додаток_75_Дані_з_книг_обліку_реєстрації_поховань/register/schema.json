@@ -1,0 +1,109 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "funeralDate",
+                "title": "Дата поховання",
+                "description": "Дата кремації (поховання),  у форматі ISO 8601 (рррр-мм-дд). Наприклад: 1950-12-02",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "cemeteryName",
+                "title": "Назва кладовища",
+                "description": "Вказується назва кладовища",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва підприємства",
+                "description": "Назва підприємства у чиєму віданні знаходиться кладовище",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Код ЄДРПОУ підприємства",
+                "description": "Код ЄДРПОУ підприємства у чиєму віданні знаходиться кладовище",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "place",
+                "title": "Координати поховання",
+                "description": "Номер сектора (ділянки), ряду (секції) та могили (ніші). або інші ідентифікатори місця поховання",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "name",
+                "title": "Імʼя",
+                "description": "Імʼя члена сімʼї. Наприклад: Тамара",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "familyName",
+                "title": "Прізвище",
+                "description": "Вказується прізвище члена сімʼї. Наприклад: Бондаренко",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "additionalName",
+                "title": "По батькові",
+                "description": "Вказується по батькові кандидата. Наприклад: Іванівна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "birthDate",
+                "title": "Дата народження",
+                "description": "Вказується дата народження,  у форматі ISO 8601 (рррр-мм-дд). Наприклад: 1856-12-01 ",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "deathDate",
+                "title": "Дата смерті",
+                "description": "Вказується дата смерті,  у форматі ISO 8601 (рррр-мм-дд). Наприклад: 1950-12-01 ",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "reason",
+                "title": "Причина смерті",
+                "description": "Вказується причина смерті. Наприклад: Порок серця",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "docDate",
+                "title": "Дата свідоцтва про смерть або іншого аналогічного документу",
+                "description": "Дата видачі свідоцтва про смерть,  у форматі ISO 8601 (рррр-мм-дд). Наприклад: 1950-12-01 ",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "docIssuerName",
+                "title": "Найменування",
+                "description": "Назва органу, який видав свідоцтво про смерть.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "docIssuerId",
+                "title": "Ідентифікатор",
+                "description": "Ідентифікатор органу, який видав свідоцтво про смерть",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": ""
+}

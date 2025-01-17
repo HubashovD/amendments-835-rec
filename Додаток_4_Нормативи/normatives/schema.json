@@ -1,0 +1,102 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Ідентифікатором нормативу є номер нормативно-правового акта (далі – НПА), яким був ухвалений норматив, та рік його прийняття, що розділені знаком дефіс. Наприклад: 123-2014. Розпорядники також можуть використовувати власні види ідентифікаторів",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Повна назва нормативів. Наприклад: Типові штатні нормативи дошкільних навчальних закладів",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "validFrom",
+                "title": "Дійсний з",
+                "description": "Дата, з якої дійсний норматив, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2010-11-14",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "validThrough",
+                "title": "Дійсний до",
+                "description": "Дата, до якої дійсний норматив, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2030-11-14. Якщо дата не встановлена, вказати: null",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на оприлюднений норматив у мережі Інтернет. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/example.doc",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Текст ",
+                "description": "Вказується текст документа або назва файлу із текстовим вмістом",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActId",
+                "title": "Ідентифікатор НПА",
+                "description": "Ідентифікатор НПА, яким ухвалено норматив. Ідентифікатор береться набору “Нормативно-правові акти, акти індивідуальної дії, прийняті розпорядником” (ресурс legalActs колонка id). Наприклад: 456-2017",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActType",
+                "title": "Вид НПА",
+                "description": "Вид НПА. Наприклад: Наказ",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActTitle",
+                "title": "Назва НПА",
+                "description": "Назва НПА. Наприклад: Про затвердження Типових штатних нормативів дошкільних навчальних закладів",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActDateAccepted",
+                "title": "Дата ухвалення НПА",
+                "description": "Дата ухвалення НПА у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "legalActNumber",
+                "title": "Номер",
+                "description": "Номер НПА. Наприклад: 1234-р.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "publisherName",
+                "title": "Назва видавника",
+                "description": "Повна назва видавника НПА, яким затверджено норматив. Наприклад: Міністерство охорони здоров’я України",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "publisherId",
+                "title": "Ідентифікатор видавника",
+                "description": "Якщо видавник є юридичною особою, вказати його код ЄДРПОУ. Наприклад: 01234567. У іншому випадку зазначити: null",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

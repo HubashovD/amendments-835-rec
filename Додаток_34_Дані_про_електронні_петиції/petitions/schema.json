@@ -1,0 +1,116 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Унікальний ідентифікатор",
+                "description": "Вказується ідентифікатор петиції. Ідентифікатор довільний, але має бути унікальним для всього ресурсу. Ідентифікатор може складатись із дати подання петиції. Наприклад: 2024-09-04-1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "kind",
+                "title": "Категорія петиції",
+                "description": "Категорія петиції. Наприклад: освіта, економіка, ЖКГ",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "title",
+                "title": "Назва петиції",
+                "description": "Вказується назва петиції. Наприклад: Про реформу освіти",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на перегляд або завантаження повного тексту петиції. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/contract-345.doc",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Текст петиції",
+                "description": "Вказується назва файлу із текстовим вмістом петиції.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "authorityName",
+                "title": "Орган",
+                "description": "Вказується назва органу, до якого подано петицію. Наприклад: Піщанська сільська рада",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Код ЄДРПОУ",
+                "description": "Код ЄДРПОУ органу, до якого подано петицію. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityCattutc",
+                "title": "Код КАТОТТГ",
+                "description": "Зазначається код Кодифікатора адміністративно-територіальних одиниць та територій територіальних громад (КАТОТТГ) на територію якої розповсюджуються повноваження органу місцевого самоврядування. Наприклад: UA32140050000046018",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "startDate",
+                "title": "Дата початку збору підписів",
+                "description": "Дата початку збору підписів у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2019-05-30\n ",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "count",
+                "title": "Загальна кількості осіб, які підписали електронну петицію",
+                "description": "Загальна кількості осіб, які підписали електронну петицію станом на дату . Наприклад: 25000",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "creator",
+                "title": "Прізвище, ім'я та по батькові автора (ініціатора) електронної петиції",
+                "description": "Вказується інформація про особу автора петиції",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Статус петиції",
+                "description": "Статус петиції. Наприклад: триває збір підписів, на розгляді, з відповіддю.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "answerDate",
+                "title": "Дата відповіді",
+                "description": "Дата відповіді у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2019-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "answerUrl",
+                "title": "Посилання",
+                "description": "Посилання на перегляд відповіді на петицію. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/contract-345.doc",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "answerText",
+                "title": "Текст відповіді на петицію",
+                "description": "Вказується текст назва файлу із текстовим вмістом відповіді на петицію",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

@@ -1,0 +1,67 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "providerId",
+                "title": "Ідентифікатор",
+                "description": "Код ЄДРПОУ постачальника послуг з управління побутовими відходами. Наприклад: 01234567. Дані реєстраційного номера облікової картки платника податків фізичної особи-підприємця знеособлюються. ",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "providerNname",
+                "title": "Назва",
+                "description": "Повна назва постачальника послуг. Наприклад: Комунальне підприємство «Благоустрій»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "unitAmountValue",
+                "title": "Вартість",
+                "description": "Вартість за одиницю у гривнях з ПДВ (лише число). Наприклад: 100. Десяткові значення відділяються крапкою. Наприклад: 5.50. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "currencyCode",
+                "title": "Валюта",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "unitName",
+                "title": "Назва одиниці виміру",
+                "description": "Назва одиниці виміру. Наприклад: куб. м.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "wasteType",
+                "title": "Тип відходів, які приймаються",
+                "description": "Вказуються типи відходів, які приймаються. Наприклад: тверді побутові відходи (не сортовані), скло, папір",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "containerType",
+                "title": "Контейнерна система",
+                "description": "Вказується тип системи збору відходів: контейнерна або безконтейнерна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "isRecycling",
+                "title": "Чи передбачений роздільний збір вторинних відходів для вторинної переробки",
+                "description": "Вказується, чи передбачений договором роздільний збір вторинної сировини. Якщо так, вказується True, якщо ні – False. Наприклад: True",
+                "datatype": "boolean",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "providerId"
+}

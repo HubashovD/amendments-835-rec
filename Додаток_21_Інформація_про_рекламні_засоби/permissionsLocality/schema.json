@@ -1,0 +1,221 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "id",
+                "title": "Номер дозволу",
+                "description": "Номер дозволу на розміщення зовнішньої реклами. Наприклад: 123",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "issuedDate",
+                "title": "Дата видання дозволу",
+                "description": "Дата дозволу у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва органу",
+                "description": "Назва органу, який видав дозвіл. Наприклад: Департамент містобудування та архітектури Ірпінської міської ради",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Ідентифікатор органу",
+                "description": "Код ЄДРПОУ органу, який видав дозвіл. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "distributorName",
+                "title": "Ім'я або назва розповсюджувача",
+                "description": "Прізвище, ім’я, по батькові або назва розповсюджувача зовнішньої реклами. Наприклад: ТОВ «Київреклама»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "distributorId",
+                "title": "Ідентифікатор розповсюджувача",
+                "description": "Код ЄДРПОУ розповсюджувача. Наприклад: 01234567. РНОКПП ФОП знеособлюються",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Статус",
+                "description": "Статус дозволу може мати одне зі значень: Чинний, Втратив чинність за терміном дії, Анульований, Перевиданий. Наприклад: Чинний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "validFrom",
+                "title": "Дата початку дії",
+                "description": "Дата, з якої діє дозвіл, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2017-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "validThrough",
+                "title": "Дата завершення дії",
+                "description": "Дата, до якої діє дозвіл, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2020-06-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "contractNumber",
+                "title": "Номер договору",
+                "description": "Номер договору на тимчасове користування місцем розміщення. Наприклад: 2018-21а",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractSignedDate",
+                "title": "Дата договору",
+                "description": "Дата укладання договору у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-06-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Вид",
+                "description": "Вид рекламного засобу, відповідно до переліку видів, що використовується розпорядником. Наприклад: Стенд, Щит, Панно, Транспарант, Трол, Короб, Табло, Екран тощо. Наприклад: Щит",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "planesValue",
+                "title": "Кількість рекламних площин",
+                "description": "Кількість рекламних площин. Наприклад: 2",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "horizontalSize",
+                "title": "Розмір по горизонталі",
+                "description": "Розмір рекламного засобу по горизонталі в метрах. Число вказується без зазначення одиниці вимірювання («м.»). Наприклад: 20. Десяткові значення відділяються крапкою.",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "verticalSize",
+                "title": "Розмір по вертикалі",
+                "description": "Розмір рекламного засобу по вертикалі в метрах. Число вказується без зазначення одиниці вимірювання («м.»). Наприклад: 20. Десяткові значення відділяються крапкою.",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "area",
+                "title": "Площа",
+                "description": "Площа рекламного засобу у квадратних метрах. Число вказується без зазначення одиниці вимірювання («кв. м.»). Наприклад: 200. Десяткові значення відділяються крапкою.",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс місця розташування рекламного засобу. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону місця розташування рекламного засобу. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер об’єкта",
+                "description": "Номер об’єкта (будівлі) може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressDescription",
+                "title": "Опис розміщення",
+                "description": "Опис вказується за потреби чіткіше визначити розміщення. Наприклад: зовнішня стіна будинку на рівні 3-го поверху",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "lat",
+                "title": "Географічна широта",
+                "description": "Географічна широта місця розташування рекламного засобу. Розділювач десяткових значень — крапка. Наприклад: 50.457718. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "lon",
+                "title": "Географічна довгота",
+                "description": "Географічна довгота місця розташування рекламного засобу. Розділювач десяткових значень — крапка. Наприклад: 30.487021. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "imageUrl",
+                "title": "Фото",
+                "description": "Посилання на фото місця розташування рекламного засобу, що оприлюднене в мережі Інтернет. Посилання має починатися з http:// або https://. Наприклад: https://lmr.gov.ua/ad/123.jpg",
+                "datatype": "anyURL",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "id"
+}

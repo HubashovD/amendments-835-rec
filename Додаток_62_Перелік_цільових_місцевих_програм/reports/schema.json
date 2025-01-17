@@ -1,0 +1,67 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Порядковий номер або будь-який інший ідентифікатор звіту. Наприклад: 01-123-2019-05-29",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "acceptedDate",
+                "title": "Дата ухвалення",
+                "description": "Дата затвердження звіту у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Назва звіту. Наприклад: Звіт про виконання програми розвитку позашкільної освіти на 2018—2021 роки за перше півріччя 2018 року",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "periodStartDate",
+                "title": "Початок періоду",
+                "description": "Початкова дата періоду, який охоплює звіт у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-01-01",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "periodEndDate",
+                "title": "Кінець періоду",
+                "description": "Кінцева дата періоду, який охоплює звіт у форматі ISO 8601 (ррр-мм-дд). Наприклад: 2018-05-31",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "programId",
+                "title": "Ідентифікатор програми",
+                "description": "Ідентифікатор програми, щодо якої складений звіт, з колонки programId таблиці programs. Наприклад: 719-2019-05-29",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "programTitle",
+                "title": "Найменування програми",
+                "description": "Найменування програми, щодо якої складений звіт, з колонки programTitle таблиці programs. Наприклад: Програма розвитку позашкільної освіти на 2018 – 2021 роки",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на копію звіту, що оприлюднена в мережі Інтернет. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/example.doc",
+                "datatype": "anyURL",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

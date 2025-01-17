@@ -1,0 +1,5 @@
+name,title,description,datatype,required
+projectUid,Унікальний ідентифікатор проєкту,"Вказується ідентифікатор проєкту, атрибут  uid ресурсу projects.",string,True
+voterID,ID голосування за проєкт,Знеособлені дані підписанта у вигляді ID. Наприклад: 77885-1,string,True
+projectTitle,Назва проєкту,"Вказується назва проєкту, атрибут  title  ресурсу projects.",string,True
+voteDate,Дата голосування за проєкт,Дата голосування за проєкт у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2019-05-30,date,True

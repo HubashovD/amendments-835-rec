@@ -1,0 +1,109 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Унікальний ідентифікатор ",
+                "description": "Унікальний ідентифікатор події голосування",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "motionUid",
+                "title": "Ідентифікатор питання порядку денного",
+                "description": "Вказується ідентифікатор питання порядку денного - атрибут uid ресурсу motions",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectNumber",
+                "title": "Номер проєкту рішення",
+                "description": "Вказується номер проєкту рішення за яке відбувається голосування. Наприклад: 757/2",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectTitle",
+                "title": "Назва проєкту рішення",
+                "description": "Вказується назва проєкту рішення за яке відбувається голосування. Наприклад: Про затвердження Переліків адміністративних послуг",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "startDate",
+                "title": "Час початку голосування",
+                "description": "Час початку голосування. Дата вказується у форматі ISO 8601 (рррр-мм-ддTгг:хх) Наприклад:2023-04-09T15:00:00.000000Z",
+                "datatype": "dateTime",
+                "required": true
+            },
+            {
+                "name": "endDate",
+                "title": "Час, коли голосування закінчується",
+                "description": "Час, коли голосування закінчується. Дата вказується у форматі ISO 8601 (рррр-мм-ддTгг:хх) Наприклад:2023-04-09T15:00:00.000000Z",
+                "datatype": "dateTime",
+                "required": true
+            },
+            {
+                "name": "result",
+                "title": "Результати голосування",
+                "description": "Результати голосування: “Прийнято”, “Не прийнято”, “Не голосували”, “Не розглядали”",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "votingFor",
+                "title": "Голоси “За”",
+                "description": "Кількість осіб, які проголосували “ЗА”. Зазначається цілим числом. Наприклад: 7",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "votingAgainst\n",
+                "title": "Голоси “Проти”",
+                "description": "Кількість осіб, які проголосували “Проти”. Зазначається цілим числом. Наприклад: 5",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "votingAbstain",
+                "title": "Голоси “Утрималися”",
+                "description": "Кількість осіб, які проголосували “Утримались”. Зазначається цілим числом. Наприклад: 3",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "notVoting",
+                "title": "Не голосували",
+                "description": "Кількість осіб, які не голосували. Зазначається цілим числом. Наприклад: 4",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "absent",
+                "title": "Відсутні",
+                "description": "Кількість осіб, які були відсутні під час голосування. Зазначається цілим числом. Наприклад: 2",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "textUrl",
+                "title": "Посилання на документ оприлюднений в мережі Інтернет.",
+                "description": "Посилання на оприлюднений документ. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Назва файлу із прийнятим рішенням",
+                "description": "Вказується назва файлу із прийнятим рішенням та додатками до нього, які оприлюднюються в архіві. Наприклад: 757-2.html",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

@@ -1,0 +1,46 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "dateTime",
+                "title": "Дата та час отримання показника",
+                "description": "Дата та час аналізу повітря у форматі ISO 8601 (рррр-мм-ддTгг:хх). Наприклад: 2019-05-30Т10:45",
+                "datatype": "dateTime",
+                "required": true
+            },
+            {
+                "name": "landfillUid",
+                "title": "Ідентифікатор полігону",
+                "description": "Вказується унікальний ідентифікатор полігону, поле uid ресурсу landfill",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "indicatorName",
+                "title": "Ідентифікатор параметра",
+                "description": "Вказується назва індикатора за яким проводиться вимірювання. Наприклад: Рівень сірководню в повітрі",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "value",
+                "title": "Значення показника",
+                "description": "Значення показника, зазначається лише значення без одиниць вимірювання. Роздільник десяткових значень - крапка. Наприклад: 0.0003",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "unitName",
+                "title": "Одиниці вимірювання",
+                "description": "Одиниці вимірювання, які застосовуються для цього параметру. Наприклад: ppm",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "landfillUid"
+}

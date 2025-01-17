@@ -1,0 +1,179 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "title",
+                "title": "Назва тимчасової споруди",
+                "description": "Назва тимчасової споруди із зазначенням напряму підприємницької діяльності",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Тип тимчасової споруди",
+                "description": "Вказується тип споруди: стаціонарна або пересувна. Наприклад: стаціонарна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси тимчасової споруди. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва країни. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону, де розміщена тимчасова споруда. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району, де розміщена тимчасова споруда. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади, де розміщена тимчасова споруда. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщена тимчасова споруда. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їхніх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо, де розміщена тимчасова споруда. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер будівлі",
+                "description": "Номер будівлі (об’єкта), де розміщена тимчасова споруда, може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу, де розміщена тимчасова споруда, зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressDescription",
+                "title": "Опис розміщення",
+                "description": "Опис вказується за потреби, щоб чіткіше визначити розміщення. Наприклад: 47 кілометр траси Київ-Обухів",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "ownerName",
+                "title": "Власник тимчасової споруди",
+                "description": "Повна назва юридичної особи або прізвище, ім’я та по батькові фізичної особи – підприємця – власника тимчасової споруди. Наприклад: КП «Благоустрій»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "ownerCode",
+                "title": "Код власника тимчасової споруди",
+                "description": "Код ЄДРПОУ юридичної особи власника тимчасової споруди. Наприклад: 01411082. Дані реєстраційного номера облікової картки платника податків фізичної особи-підприємця знеособлюються",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "passportNumber",
+                "title": "Номер паспорту прив'язки",
+                "description": "Вказується реєстраційний номер паспорту прив’язки тимчасової споруди. Наприклад: СВ-125/12",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "passportIssuedName",
+                "title": "Назва органу, який видав паспорт",
+                "description": "Назва органу місцевого самоврядування, яким видано паспорт прив’язки. Наприклад: Згурівська міська рада",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "passportStatus",
+                "title": "Статус паспорта прив’язки",
+                "description": "Статус паспорта прив’язки. Вказується актуальний статус паспорта: дійсний, призупинений, анульований. Наприклад: дійсний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "passporttIssuedDate",
+                "title": "Дата видачі паспорта",
+                "description": "Дата видачі паспорта прив’язки",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "passportDateUntil",
+                "title": "Дата до якої дійсний паспорт прив’язки",
+                "description": "Вказується дата до якої дійсний паспорт прив’язки",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "passportText",
+                "title": "Назва файлу із паспортом прив’язки",
+                "description": "Вказується назва файлу із паспортом прив’язки, які оприлюднюються в архіві. Наприклад: 757-2.html",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "passportUrl",
+                "title": "Паспорт прив’язки",
+                "description": "Посилання на паспорт прив’язки оприлюднений в мережі інтернет (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/photo.png. Якщо фото відсутнє, вказати: null",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "lat",
+                "title": "Географічна широта",
+                "description": "Географічна широта місця розміщення тимчасової споруди. Розділювач десяткових значень — крапка. Наприклад: 50.457718. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "constructionlon",
+                "title": "Географічна довгота",
+                "description": "Географічна довгота місця розміщення тимчасової споруди. Розділювач десяткових значень — крапка. Наприклад: 30.487021. У разі відсутності вказати: null",
+                "datatype": "decimal",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": ""
+}

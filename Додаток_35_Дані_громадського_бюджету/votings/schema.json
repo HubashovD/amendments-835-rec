@@ -1,0 +1,39 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "projectUid",
+                "title": "Унікальний ідентифікатор проєкту",
+                "description": "Вказується ідентифікатор проєкту, атрибут  uid ресурсу projects.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "voterID",
+                "title": "ID голосування за проєкт",
+                "description": "Знеособлені дані підписанта у вигляді ID. Наприклад: 77885-1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectTitle",
+                "title": "Назва проєкту",
+                "description": "Вказується назва проєкту, атрибут  title  ресурсу projects.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "voteDate",
+                "title": "Дата голосування за проєкт",
+                "description": "Дата голосування за проєкт у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2019-05-30",
+                "datatype": "date",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "projectUid"
+}

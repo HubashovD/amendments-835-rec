@@ -1,0 +1,74 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор документа",
+                "description": "Унікальним ідентифікатором документа є ідентифікатор основної угоди з таблиці contracts (колонка uid) та номер документа, що розділені знаком дефіс. Наприклад: 345/п-2018-1. Розпорядники можуть використовувати власні ідентифікатори",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractUid",
+                "title": "Ідентифікатор основного договору",
+                "description": "Ідентифікатор основної угоди з таблиці contracts (колонка uid). Наприклад: 345/п-2018-1.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "number",
+                "title": "Номер",
+                "description": "Номер документа (без знаку “№”). Наприклад: 1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "dateSigned",
+                "title": "Дата підписання",
+                "description": "Дата підписання документа у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Тип",
+                "description": "Тип документа: Акт, Додаткова угода, Протокол, тощо. Наприклад: Додаткова угода",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Повна назва документа. Наприклад: Додаткова угода №1 до Інвестиційного договору №345/п",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "amountValue",
+                "title": "Вартість додаткового документу",
+                "description": "Очікувана вартість додаткового документу гривнях (лише число). Десяткові значення відділяються крапкою або комою. Наприклад: 120000.,00.",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "description",
+                "title": "Опис",
+                "description": "Короткий опис змісту документа. Наприклад: Додатковою угодою продовжений строк дії Договору до 31 грудня 2019 року, але в будь-якому разі до повного виконання сторонами своїх зобов’язань",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на перегляд або завантаження документа. Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/contract-345.doc",
+                "datatype": "anyURL",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

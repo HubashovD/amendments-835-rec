@@ -1,0 +1,46 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Унікальний ідентифікатор",
+                "description": "Вказується ідентифікатор сесії",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "label",
+                "title": "Сесія",
+                "description": "Вказується сесія, на якій розглядається питання порядку денного. Наприклад: 3 сесія",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "convocationUid",
+                "title": "Ідентифікатор скликання",
+                "description": "Вказується ідентифікатор скликання до якого відноситься сесія - атрибут uid ресурсу convocations",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "dateFrom",
+                "title": "Дата початку сесії",
+                "description": "Дата початку сесії, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "dateUntil",
+                "title": "Дата завершення сесії",
+                "description": "Дата закінчення сесії, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

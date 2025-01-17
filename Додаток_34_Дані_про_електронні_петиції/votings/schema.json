@@ -1,0 +1,39 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "motionUid",
+                "title": "Унікальний ідентифікатор",
+                "description": "Вказується ідентифікатор петиції атрибут uid з ресурсу petitions. Наприклад: 2024-09-04-1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "voterName",
+                "title": "ПІБ підписанта петиції",
+                "description": "Прізвище, імʼя по батькові підписанта петиції. Наприклад: Коваленко Сергій Олександрович",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "motionTitle",
+                "title": "Назва петиції",
+                "description": "Вказується назва петиції атрибут title ресурсу petitions. Наприклад: Про реформу освіти",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "date",
+                "title": "Дата підписання петиції",
+                "description": "Дата підписання петиції у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2019-05-30",
+                "datatype": "date",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "motionUid"
+}

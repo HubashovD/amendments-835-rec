@@ -1,0 +1,81 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор показника",
+                "description": "Порядковий номер або будь-який інший ідентифікатор показника. Наприклад: 5",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "date",
+                "title": "Дата зняття показника",
+                "description": "Дата зняття показника у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "organizationName",
+                "title": "Назва закладу",
+                "description": "Повна назва закладу відповідно до Єдиного державного реєстра юридичних осіб, фізичних осіб-підприємців і громадських формувань (далі – ЄДР). Наприклад: Київський міський пологовий будинок",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "organizationId",
+                "title": "Ідентифікатор закладу",
+                "description": "Код ЄДРПОУ закладу. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "providerName",
+                "title": "Назва постачальника",
+                "description": "Повна назва постачальника послуг відповідно до ЄДР. Наприклад: ПАТ «Київтеплоенерго»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "providerId",
+                "title": "Ідентифікатор постачальника",
+                "description": "Код ЄДРПОУ постачальника послуг. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "meterNumber",
+                "title": "Ідентифікатор лічильника",
+                "description": "Заводський номер лічильника або будь-який його ідентифікатор. Наприклад: ЛВ-210/654",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Тип послуги",
+                "description": "Тип комунальної послуги. Наприклад: Централізоване водопостачання",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "quantity",
+                "title": "Показник",
+                "description": "Показники лічильника або обсяг твердого палива. Наприклад: 100.0 Десяткові значення відділяються крапкою. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "unitName",
+                "title": "Одиниця виміру",
+                "description": "Назва одиниці виміру показника. Наприклад: кубічний метр",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

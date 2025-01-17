@@ -1,0 +1,81 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "legalActTitle",
+                "title": "Назва нормативного акту",
+                "description": "Вказується назва нормативного акту. Наприклад “Конституція України”",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActId",
+                "title": "Номер нормативного акту",
+                "description": "Вказується номер нормативного акту (за наявності). В разі відсутності вказати null. Наприклад: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "legalActDate",
+                "title": "Дата прийняття нормативного акту",
+                "description": "Вказується дата прийняття нормативного акту у форматі ISO 8601 (рррр-мм-дд). Наприклад: 1996-06-28",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "legalActPublication",
+                "title": "Інформація про першу публікацію.",
+                "description": "Вказується інформація про першу публікацію нормативного акту. Наприклад: Відомості Верховної Ради України (ВВР), 1996, № 30, ст. 14",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActType",
+                "title": "Тип нормативного акту",
+                "description": "Вказується тип нормативного акту: Закон України, наказ міністерства, розпорядження міського голови тощо. Наприклад: Конституція України",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActAdopterName",
+                "title": "Назва органу, який прийняв нормативний акт",
+                "description": "Вказується назва органу державної влади або місцевого самоврядування, який прийняв нормативний акт. Наприклад: Верховна рада України",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActAdopterId",
+                "title": "Код ЄДРПОУ органу, який прийняв нормативний акт",
+                "description": "Вказується код ЄДРПОУ органу, який прийняв нормативний акт. Наприклад: 20064120",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActStatus",
+                "title": "Статус нормативного акту",
+                "description": "Вказується статус нормативного акту: чинний, втратив чинність тощо. Наприклад: чинний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "legalActUrl",
+                "title": "Посилання на нормативний акт, оприлюднений в мережі інтернет",
+                "description": "Посилання  на нормативний акт, що оприлюднений у мережі Інтернет (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/legalact",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Текст ",
+                "description": "Вказується текст документа або назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "legalActId"
+}

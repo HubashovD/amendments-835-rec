@@ -1,0 +1,123 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "identifier",
+                "title": "Ідентифікатор",
+                "description": "Номер або інший унікальний ідентифікатор графічного матеріалу. Наприклад, z-2018-01",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Повна назва документу. Наприклад: Схема господарського розвитку (промисловість)",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "creationDate",
+                "title": "Дата створення",
+                "description": "Дата створення графічного матеріалу у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2011-12-01",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "customerName",
+                "title": "Назва замовника",
+                "description": "Найменування (організаційно-правова форма та назва) юридичної особи замовника схеми. Наприклад: Броварська районна державна адміністрація",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "customerCode",
+                "title": "Код ЄДРПОУ замовника",
+                "description": "Код ЄДРПОУ юридичної особи замовника схеми. Наприклад: 01411082",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "executantName",
+                "title": "Назва розробника",
+                "description": "Найменування (організаційно-правова форма та назва) юридичної особи розробника схеми. Наприклад: Товариство з обмеженою відповідальністю «Містпроект»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "executantId",
+                "title": "Код ЄДРПОУ розробника",
+                "description": "Код ЄДРПОУ юридичної особи розробника схеми. Наприклад: 01411082",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractNumber",
+                "title": "Номер договору",
+                "description": "Вказується номер договору між замовником та розробником схеми",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на копію документу, оприлюднену в мережі Інтернет (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/example/",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "fileName",
+                "title": "Назва файлу",
+                "description": "Назва файлу із текстовими матеріалами, який завантажений в архів. ",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionStatus",
+                "title": "Статус",
+                "description": "Статус рішення. Вказується статус того чи прийнятий цей документ, або він знаходиться на стадії проекту, або громадського обговорення. Якщо документ знаходиться на стадії проекту, наступні поля заповнюються значенням: null. Наприклад: Затверджено",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "decisionName",
+                "title": "Назва рішення",
+                "description": "Назва рішення або іншого нормативно - правового акту, яким було затверджено документ",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionNumber",
+                "title": "Номер рішення",
+                "description": "Номер рішення або іншого нормативно - правового акту, яким було затверджено документ",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionDate",
+                "title": "Дата рішення",
+                "description": "Дата рішення або іншого нормативно - правового акту, яким було затверджено документ",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва органу, що прийняв рішення",
+                "description": "Назва органу, який прийняв рішення щодо затвердження документу.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "authorityId",
+                "title": "Код ЄДРПОУ органу, що прийняв рішення",
+                "description": "Код ЄДРПОУ органу, який прийняв рішення щодо затвердження документу.",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "identifier"
+}

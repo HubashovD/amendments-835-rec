@@ -1,0 +1,172 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Реєстраційний номер будівельного паспорта. Наприклад: 2019-345/п",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "issuedDate",
+                "title": "Дата видачі",
+                "description": "Дата видачі у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва органу",
+                "description": "Назва уповноваженого органу. Наприклад: Департамент містобудування та архітектури Дніпровської міської ради",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Ідентифікатор органу",
+                "description": "Код ЄДРПОУ уповноваженого органу. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "applicantName",
+                "title": "Ім'я або назва замовника",
+                "description": "Прізвище, ім’я, по батькові або назва юридичної особи замовника. Наприклад: Супрун Олександр Іванович.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "applicantId",
+                "title": "Ідентифікатор замовника",
+                "description": "Код ЄДРПОУ замовника. Наприклад: 01234567. Дані реєстраційного номера облікової картки платника податків фізичної особи -підприємця знеособлюються",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Вид будівництва",
+                "description": "Вказується вид будівництва відповідно до пункту 1 частини першої статті 1 Закону України «Про регулювання містобудівної діяльності»: нове будівництво, реконструкція, реставрація, капітальний ремонт об’єкта будівництва",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "name",
+                "title": "Назва об'єкта",
+                "description": "Назва об'єкта будівництва. Наприклад: Житловий будинок",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "cadastralNumber",
+                "title": "Кадастровий номер",
+                "description": "Кадастровий номер земельної ділянки, на якій розміщується об’єкт будівництва. Наприклад: 12345678901:01:012:0123",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси об'єкта будівництва. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону, де розміщений об’єкт будівництва. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо, де розміщений об’єкт. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер об’єкта",
+                "description": "Номер може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "status",
+                "title": "Статус",
+                "description": "Статус будівельного паспорта може мати одне зі значень: Чинний, Чинний зі змінами, Втратив чинність, Скасований, Чинність відновлено. Наприклад: Чинний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "statusDescription",
+                "title": "Підстава зміни статусу",
+                "description": "Інформація про підставу для зміни статусу документа. Наприклад: наказ Департаменту містобудування та архітектури Дніпровської міської ради № 234 від 12 березня 2019 року. Якщо зміни відсутні, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на копію будівельного паспорта, оприлюднену в мережі Інтернет (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/example/",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": ""
+}

@@ -1,0 +1,81 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "number",
+                "title": "Номер",
+                "description": "Номер загального порядку в списку на одержання жилих приміщень (ціле число). Наприклад: 19",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "familyName",
+                "title": "Прізвище",
+                "description": "Вказується прізвище заявника. Наприклад: Ковальчук",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "name",
+                "title": "Імʼя",
+                "description": "Вказується імʼя заявника. Наприклад: Віктор",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "additionalName",
+                "title": "По батькові ",
+                "description": "Вказується по батькові заявника. Наприклад: Зосимович",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "outOfLineDecisionDate",
+                "title": "Дата рішення про включення до списку",
+                "description": "Дата рішення про включення до списку у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "outOfLineDecisionNumber",
+                "title": "Номер рішення про включення до списку",
+                "description": "Номер рішення про включення до списку (без знака “№”). Наприклад: 123-р",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "allocationDecisionDate",
+                "title": "Дата рішення про надання жилого приміщення",
+                "description": "Дата рішення про надання жилого приміщення у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "allocationDecisionNumber",
+                "title": "Номер рішення про надання жилого приміщення",
+                "description": "Номер рішення про надання жилого приміщення (без знака “№”). Наприклад: 123-р",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "exclusionDecisionDate",
+                "title": "Дата рішення про зняття з обліку",
+                "description": "Дата рішення про зняття з обліку у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "exclusionDecisionNumber",
+                "title": "Номер рішення про зняття з обліку",
+                "description": "Номер рішення про зняття з обліку (без знака “№”). Наприклад: 123-р",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "number"
+}

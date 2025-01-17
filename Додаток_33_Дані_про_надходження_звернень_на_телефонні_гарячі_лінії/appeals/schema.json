@@ -1,0 +1,151 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Реєстраційний номер або будь-який інший ідентифікатор звернення. Наприклад: 2019/102",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "receivedDateTime",
+                "title": "Дата та час реєстрації",
+                "description": "Дата та час реєстрації звернення у форматі ISO 8601 (рррр-мм-ддTгг:хх). Наприклад: 2019-05-30Т10:45",
+                "datatype": "dateTime",
+                "required": true
+            },
+            {
+                "name": "type",
+                "title": "Тип звернення",
+                "description": "Тип звернення. Наприклад: «Повідомлення про аварійну ситуацію»,«Запит на інформацію».",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "kind",
+                "title": "Тематична категорія",
+                "description": "Тематична категорія. Наприклад: «Водопостачання», «Електропостачання».",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "content",
+                "title": "Зміст",
+                "description": "Вказується зміст звернення або скарги, конфіденційна інформація (така, як ПІБ заявника тощо) має знеособлюватись. Наприклад: Відсутнє гаряче водопостачання та опалення в будинку, в підвалі чутно шум води.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "accrualMethod",
+                "title": "Спосіб надходження",
+                "description": "Вказується спосіб надходження. Наприклад: Гаряча лінія",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТГ",
+                "description": "Код КАТОТГ адміністративної одиниці адреси звернення. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси звернення. Наприклад: 01234",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону адреси звернення. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Назва вулиці на якій відбулась подія щодо якої звертаються.Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо адреси звернення. Наприклад: вул. Харківська.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер об’єкта",
+                "description": "Номер будівлі в якій відбулась подія щодо якої звертаються.Номер може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу будівлі в якій відбулась подія щодо якої звертаються. зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "status",
+                "title": "Статус",
+                "description": "Статус обробки звернення. Наприклад: «Заявку прийнято»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "organizationName",
+                "title": "Назва виконавця",
+                "description": "Вказується назва організація - виконавця робіт. ",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "organizationId",
+                "title": "Код ЄДРПОУ виконавця",
+                "description": "Код ЄДРПОУ юридичної особи виконавця. Наприклад: 01411082",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "result",
+                "title": "Результат розгляду заявки",
+                "description": "Результат за результатами розгляду заявки. Наприклад: «Пошкодження аварійної ділянки усунено»",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

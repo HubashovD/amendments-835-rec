@@ -1,0 +1,95 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Унікальним ідентифікатором може бути ідентифікатор адреси з адресного реєстру або будь-яка інша довільна комбінація. Наприклад: lisova-123",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "postCode",
+                "title": "Поштовий індекс",
+                "description": "П’ятизначний поштовий індекс адреси. Наприклад: 71890",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "adminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "adminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "adminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "postName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "thoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо, на якому розміщена адреса. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "locatorDesignator",
+                "title": "Номер будівлі",
+                "description": "Номер може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу зазнається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "territoryuid",
+                "title": "Ідентифікатор території",
+                "description": "Ідентифікатор території обслуговування з таблиці Territories. Наприклад: 5",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

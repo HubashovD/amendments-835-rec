@@ -1,0 +1,221 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Унікальним ідентифікатором договору є його номер та рік підписання, що розділені знаком дефіс. Наприклад: 345/п-2018. Розпорядники можуть використовувати власні ідентифікатори",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "number",
+                "title": "Номер договору",
+                "description": "Номер договору. Наприклад: 345/п",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "dateSigned",
+                "title": "Дата підписання",
+                "description": "Дата підписання договору у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва органу",
+                "description": "Назва органу, який є стороною договору. Наприклад: Управління державного архітектурно-будівельного контролю Дніпровської міської ради",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Ідентифікатор органу",
+                "description": "Код ЄДРПОУ органу, який є стороною договору. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "customerName",
+                "title": "Ім'я або назва замовника",
+                "description": "Прізвище, ім’я, по батькові або назва юридичної особи замовника. Наприклад: ФОП Коваленко Олена Василівна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "customerId",
+                "title": "Ідентифікатор замовника",
+                "description": "Код ЄДРПОУ замовника. Наприклад: 01234567. Дані реєстраційного номера облікової картки платника податків фізичної особи-підприємця знеособлюються",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "description",
+                "title": "Опис",
+                "description": "Опис предмета договору, у тому числі найменування об’єкта будівництва. Наприклад: Будівництво житлового будинку №19 у складі проекту торговельно-офісно-розважального комплексу (ІІІ черга будівництва)",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "cadastralNum",
+                "title": "Кадастровий номер",
+                "description": "Кадастровий номер земельної ділянки, на якій розміщується об’єкт будівництва. Наприклад: 12345678901:01:012:0123",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси об'єкта будівництва. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради, де розміщене насадження. У колонці потрібно зазначати лише назву (без слова «місто», «селищна рада» та їх скорочень «м.» та «с. р.»). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер об’єкта",
+                "description": "Номер може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу зазначається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "periodStartDate",
+                "title": "Початок дії",
+                "description": "Дата початку дії договору у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "periodEndDate",
+                "title": "Завершення дії",
+                "description": "Дата завершення дії договору у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-09-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "paymentEndDate",
+                "title": "Термін сплати",
+                "description": "Граничний термін сплати пайового внеску у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-10-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Статус договору",
+                "description": "Статус договору може мати одне зі значень: Чинний, Виконаний, Скасований, Призупинений. Наприклад: Чинний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "amountValue",
+                "title": "Сума пайового внеску",
+                "description": "Загальна сума пайового внеску. Число вказується без зазначення валюти (“грн», “UAH»). Наприклад: 3000.0 Десяткові значення відділяються крапкою. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "percent",
+                "title": "Розмір пайової участі",
+                "description": "Розмір пайової участі у відсотках. Число вказується без знака відсотка. Наприклад: 3. Десяткові значення відділяються крапкою.  Наприклад: 5.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "paymentAmountValue",
+                "title": "Сплачений внесок",
+                "description": "Сума платежу у гривнях без зазначення валюти (“грн», “UAH»). Наприклад: 2225.50. Десяткові значення відділяються крапкою. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "debtAmountValue",
+                "title": "Заборгованість",
+                "description": "Наявна заборгованість у гривнях без зазначення валюти (“грн», “UAH»). Наприклад: 2225.50. Десяткові значення відділяються крапкою. Якщо заборгованість відсутня, вказати: 0.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "penyAmountValue",
+                "title": "Пеня",
+                "description": "Нарахована пеня у гривнях без зазначення валюти (“грн», “UAH»). Наприклад: 2225.50 . Десяткові значення відділяються крапкою. Якщо пеня відсутня, вказати: 0.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "penaltyAmountValue",
+                "title": "Штраф",
+                "description": "Нарахований штраф у гривнях без зазначення валюти (“грн», “UAH»). Наприклад: 2225.50 . Десяткові значення відділяються крапкою. Якщо штрафи відсутні, вказати 0.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "penaltyAmountCurrency",
+                "title": "Валюта",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

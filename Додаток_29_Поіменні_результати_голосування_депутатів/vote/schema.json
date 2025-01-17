@@ -1,0 +1,32 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Унікальний ідентифікатор",
+                "description": "Унікальний ідентифікатор голосування - атрибут uid із ресурсу votingEvent",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "voterUid",
+                "title": "Ідентифікатор учасника голосування",
+                "description": "Ідентифікатор депутата, (атрибут votingIdentifier) із набору даних “Дані про депутатів ради, у тому числі контактні дані та графік прийому”",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "result",
+                "title": "Результат голосування",
+                "description": "Голос: “За”, “Проти”, “Утримався”, “Не голосував”, “Відсутній”",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

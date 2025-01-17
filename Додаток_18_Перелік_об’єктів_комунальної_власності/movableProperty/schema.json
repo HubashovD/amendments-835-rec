@@ -1,0 +1,123 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Ідентифікатором об’єкта може може бути код ЄДРПОУ балансоутримувача та інвентарний номер об’єкта, що розділені знаком дефіс “-”. Наприклад: 01234567-10000234. Розпорядники можуть використовувати власні ідентифікатори",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "inventoryNumber",
+                "title": "Інвентарний номер",
+                "description": "Інвентарний номер об’єкта. Наприклад: 10000234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "balanceHolderName",
+                "title": "Назва балансоутримувача",
+                "description": "Повна назва юридичної особи, яка є балансоутримувачем об'єкта. Наприклад: Міська лікарня №4 Житомирської міської ради",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "balanceHolderId",
+                "title": "Ідентифікатор балансоутримувача",
+                "description": "Код ЄДРПОУ юридичної особи, яка є балансоутримувачем об'єкта. Наприклад: 01411082. Якщо балансоутримувач відсутній, зазначається: null",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "serialNumber",
+                "title": "Серійний номер",
+                "description": "Серійний номер об’єкта. Наприклад: 12345-67890. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "passportNumber",
+                "title": "Номер паспорта",
+                "description": "Номер паспорта об'єкта. Наприклад: 12345-67890. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "title",
+                "title": "Найменування",
+                "description": "Найменування об'єкта. Наприклад: Apple MacBook Pro 15\" Retina",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "model",
+                "title": "Модель",
+                "description": "Модель об'єкта. Наприклад: Z0RF00052'",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "producerName",
+                "title": "Виробник",
+                "description": "Назва виробника об'єкта. Наприклад: Apple Inc",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "yearMade",
+                "title": "Рік випуску",
+                "description": "Рік випуску об'єкта (лише число). Наприклад: 2015",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "quantity",
+                "title": "Кількість",
+                "description": "Кількість одиниць. Наприклад: 3. Десяткові значення відділяються крапкою. Наприклад: 2.0 ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "unitName",
+                "title": "Одиниця виміру",
+                "description": "Назва одиниці виміру, наприклад, штука, пара, набір тощо. Наприклад: шт.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "primaryValueAmount",
+                "title": "Первісна вартість",
+                "description": "Первісна (переоцінена) в гривнях без зазначення валюти (“грн”, “UAH”). Наприклад: 123000.00. Десяткові значення відділяються крапкою. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "amortizationValueAmount",
+                "title": "Сума зносу",
+                "description": "Сума зносу (накопиченої амортизації) в гривнях без зазначення валюти (“грн”, “UAH”). Наприклад: 3000.00. Десяткові значення відділяються крапкою. ",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "bookValueAmount",
+                "title": "Балансова вартість",
+                "description": "Балансова вартість в гривнях без зазначення валюти (“грн”, “UAH”). Наприклад: 120000.00. Десяткові значення відділяються крапкою.",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "usageDuarationInYears",
+                "title": "Корисне використання",
+                "description": "Строк корисного використання в роках (лише число). Десяткові значення відділяються крапкою. Наприклад: 10.0 ",
+                "datatype": "decimal",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

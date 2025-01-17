@@ -1,0 +1,116 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Розпорядники також можуть використовувати власні види ідентифікаторів. Наприклад: 001",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "title",
+                "title": "Назва",
+                "description": "Назва цілей застосування технічних регламентів. Наприклад: Перелік національних стандартів, що гармонізовані з відповідними європейськими стандартами та є доказом безпечності нехарчової продукції",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "acceptance_Date",
+                "title": "Дата ухвалення",
+                "description": "Дата ухвалення нормативно-правового акта, яким прийнято національний стандарт, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "number",
+                "title": "Номер",
+                "description": "Номер НПА, яким прийнято національний стандарт. Наприклад: 1234-р",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "issuedDate",
+                "title": "Дата оприлюднення",
+                "description": "Дата оприлюднення нормативно-правового акта у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "validFrom",
+                "title": "Чинний від",
+                "description": "Дата набрання чинності нормативно-правовим актом у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Статус",
+                "description": "Статус може мати одне зі значень: Набирає чинності, Чинний, Втратив чинність, Дію зупинено, Дію відновлено, Не набрав чинності. Наприклад: Чинний",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "publisherName",
+                "title": "Назва видавника",
+                "description": "Повна назва видавника. Наприклад: Міністерство економіки України",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "publisherId",
+                "title": "Ідентифікатор видавника",
+                "description": "Код ЄДРПОУ. Наприклад: 01234567. У іншому випадку зазначити: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "url",
+                "title": "Посилання",
+                "description": "Посилання на оприлюднений в мережі Інтернет документ (URL). Посилання має починатися з http:// або https://. Наприклад: https://www.example.gov.ua/example/",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "text",
+                "title": "Текст ",
+                "description": "Вказується назва файлу із текстовим вмістом",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "registrationNumber",
+                "title": "Номер державної реєстрації",
+                "description": "Номер акта за державним реєстром. Наприклад: 123/12345. Якщо державна реєстрація не передбачена, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "registrationDate",
+                "title": "Дата державної реєстрації",
+                "description": "Дата державної реєстрації акта форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06. Якщо державна реєстрація не передбачена, вказати: null",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "registratorName",
+                "title": "Назва реєстратора",
+                "description": "Назва суб’єкта, що провів державну реєстрацію НПА. Наприклад: Головне територіальне управління юстиції у місті Києві. Якщо державна реєстрація не передбачена, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "registratorId",
+                "title": "Ідентифікатор реєстратора",
+                "description": "Код ЄДРПОУ суб’єкта, що провів державну реєстрацію НПА. Наприклад: 01234567. Якщо державна реєстрація не передбачена, вказати: null",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": ""
+}

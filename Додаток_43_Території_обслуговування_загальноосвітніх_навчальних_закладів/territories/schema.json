@@ -1,0 +1,39 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Порядковий номер або будь-який інший ідентифікатор території обслуговування. Наприклад: 5",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "institutionId",
+                "title": "Ідентифікатор закладу",
+                "description": "Код ЄДРПОУ закладу освіти. Наприклад: 01234567. Якщо код ЄДРПОУ відсутній, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "institutionName",
+                "title": "Назва закладу",
+                "description": "Повна назва закладу освіти. Наприклад: Луцька спеціалізована школа І-ІІІ ступенів №1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "description",
+                "title": "Опис",
+                "description": "Опис меж території обслуговування. Адреси, назви вулиць та інші орієнтири мають бути відділені знаком крапка з комою.",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

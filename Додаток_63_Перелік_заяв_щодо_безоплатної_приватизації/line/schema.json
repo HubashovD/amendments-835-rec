@@ -1,0 +1,123 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Реєстраційний номер або будь-який інший ідентифікатор звернення. Наприклад: 2019/102",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "receivedDate",
+                "title": "Дата реєстрації",
+                "description": "Дата реєстрації звернення у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-06-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "number",
+                "title": "Номер у черзі",
+                "description": "Номер звернення в черзі на отримання земельної ділянки (ціле число). Наприклад: 19",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "applicantFamilyName",
+                "title": "Прізвище",
+                "description": "Вказується прізвище заявника. Наприклад: Ковальчук",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "applicantName",
+                "title": "Імʼя",
+                "description": "Вказується імʼя заявника. Наприклад: Віктор",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "applicantAdditionalName",
+                "title": "По батькові ",
+                "description": "Вказується по батькові заявника. Наприклад: Зосимович",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "isBenefitType",
+                "title": "Першочерговість",
+                "description": "Наявність підстави для першочергового отримання земельної ділянки відповідно до частини 1 статті 34 Закону України “Про місцеве самоврядування в Україні” може мати одне зі значень: Так або Ні. Інформація про тип та підставу отримання пільги знеособлюється. Наприклад: Так",
+                "datatype": "boolean",
+                "required": true
+            },
+            {
+                "name": "status",
+                "title": "Статус",
+                "description": "Статус звернення може мати одне зі значень: Чинне, Виконане, Відкликане. Наприклад: Чинне",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "decisionType",
+                "title": "Вид НПА",
+                "description": "У випадку відведення земельної ділянки на звернення, у цій та наступних колонках зазначається інформація про відповідний нормативно-правовий акт (далі – НПА). Вид НПА, яким відведена ділянка. Наприклад: Рішення. В іншому випадку в цій та наступних колонках вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionTitle",
+                "title": "Назва НПА",
+                "description": "Назва НПА, яким відведена ділянка. Наприклад: Про відведення земельних ділянок для садибної забудови мікрорайону Промисловий",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionIssued",
+                "title": "Дата ухвалення НПА",
+                "description": "Дата ухвалення НПА у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-07-06",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "decisionNumber",
+                "title": "Номер НПА",
+                "description": "Номер НПА (без знаку «№»). Наприклад: 1234-р.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "decisionUrl",
+                "title": "Посилання на НПА",
+                "description": "Посилання на копію НПА, оприлюднену в мережі Інтернет. Адреса має розпочинатися з http:// або https://. Наприклад: https://uzhhorod.gov.ua/doc/rishennja-987",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "text",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "publisherName",
+                "title": "Назва видавника НПА",
+                "description": "Повна назва видавника НПА. Наприклад: Виконавчий комітет Тернопільської міської ради",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "publisherId",
+                "title": "Ідентифікатор видавника НПА",
+                "description": "Код ЄДРПОУ видавника. Наприклад: 01234567",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": ""
+}

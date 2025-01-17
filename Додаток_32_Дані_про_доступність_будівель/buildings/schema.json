@@ -1,0 +1,130 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Порядковий номер або будь-який інший унікальний  ідентифікатор будинку або споруди. Наприклад: 0015",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "monitoringDate",
+                "title": "Дата",
+                "description": "Дата проведення перевірки/моніторингу у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Назва органу",
+                "description": "Назва органу, що здійснив перевірку/моніторинг. Наприклад: Управління з питань державного архітектурно-будівельного контролю Херсонської міської ради",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Ідентифікатор органу",
+                "description": "Код ЄДРПОУ органу, що здійснив перевірку/моніторинг. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "entityName",
+                "title": "Ім’я або назва суб’єкта",
+                "description": "Прізвище, ім’я, по батькові або назва юридичної особи суб’єкта містобудування, що є відповідальним за дотримання вимог доступності будівель та споруд. Наприклад: КП «Херсонська міська поліклініка №1»",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "entityId",
+                "title": "Ідентифікатор суб’єкта",
+                "description": "Код ЄДРПОУ суб’єкта містобудування, що є відповідальним за дотримання вимог доступності будівель та споруд. Наприклад: 01234567. Дані реєстраційного номера облікової картки платника податків фізичної особи-підприємця знеособлюються",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "buildingName",
+                "title": "Назва об’єкта",
+                "description": "Назва будівлі/споруди. Наприклад: Головний корпус Поліклініки №1",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressPostCode",
+                "title": "Поштовий індекс",
+                "description": "Поштовий індекс адреси будівлі/споруди. Наприклад: 01234",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва країни. У колонці має бути зазначено: Україна",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Регіон",
+                "description": "Назва регіону, де розміщена будівля/споруда. Наприклад: Полтавська область",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район",
+                "description": "Назва району. Наприклад: Броварський район. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressAdminUnitL4",
+                "title": "Територіальна громада",
+                "description": "Назва територіальної громади. Наприклад: Згурівська. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "addressPostName",
+                "title": "Населений пункт",
+                "description": "Назва населеного пункту або назва селищної чи сільської ради. У колонці потрібно зазначати лише назву (без слова “місто”, “селищна рада” та їх скорочень “м.” та “с. р.”). Наприклад: Балта",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressThoroughfare",
+                "title": "Вулиця або аналог",
+                "description": "Тип та назва площі, майдану, шосе, проспекту, бульвару, алеї, провулку, узвозу тощо. Наприклад: вул. Харківська",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorDesignator",
+                "title": "Номер будівлі",
+                "description": "Номер будівлі (об’єкта) може включати числа та букви. Наприклад: 15-А",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressLocatorBuilding",
+                "title": "Номер корпусу",
+                "description": "Номер корпусу зазнається числом для об’єктів, які складаються з декількох корпусів. Наприклад: 3. У разі відсутності вказати: null",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

@@ -1,0 +1,60 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Унікальний ідентифікатор",
+                "description": "Вказується унікальний ідентифікатор скликання",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "label",
+                "title": "Скликання",
+                "description": "Вказується номер та назва скликання органу місцевого самоврядування. Наприклад: 6 скликання",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "dateFrom",
+                "title": "Дата початку скликання",
+                "description": "Дата початку скликання, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "dateUntil",
+                "title": "Дата завершення скликання",
+                "description": "Дата закінчення скликання, у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2014-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "authorityName",
+                "title": "Орган місцевого самоврядування",
+                "description": "Вказується назва органу в якому проводиться засідання. Наприклад: Піщанська сільська рада ",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "authorityId",
+                "title": "Код ЄДРПОУ",
+                "description": "Код ЄДРПОУ органу в якому проводиться засідання. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

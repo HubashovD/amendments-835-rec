@@ -1,0 +1,88 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор",
+                "description": "Реєстраційний номер або будь-який інший ідентифікатор заявки. Наприклад: 10",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "receivedDate",
+                "title": "Дата подання",
+                "description": "Дата подання заявки у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-06-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "number",
+                "title": "Номер у черзі",
+                "description": "Номер заявки в черзі на отримання місця (ціле число). Наприклад: 19",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "gender",
+                "title": "Стать",
+                "description": "Стать дитини. Зазначається цифрами відповідно до стандарту ISO/IEC 5218:2004: 0 — невідомо, 1 — чоловік, 2 — жінка, 9 — не застосовується. Наприклад: 2",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "birthDate",
+                "title": "Дата народження дитини",
+                "description": "Зазначається рік народження дитини, цілим числом. Наприклад: 2022",
+                "datatype": "integer",
+                "required": true
+            },
+            {
+                "name": "ageGroup",
+                "title": "Вікова група",
+                "description": "Вікова група відповідного до наявного поділу в закладах. Наприклад: Друга група раннього віку — від 2 до 3 років",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "benefitType",
+                "title": "Наявність пільг",
+                "description": "Наявність пільг може мати одне зі значень: Так або Ні. Інформація про тип та підставу отримання пільги знеособлюється. Наприклад: Так",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "institutionName",
+                "title": "Назва закладу",
+                "description": "Назва закладу, куди була подана заявка. Наприклад: Дошкільний навчальний заклад №2 Шевченківського району м. Києва",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "institutionId",
+                "title": "Ідентифікатор закладу",
+                "description": "Код ЄДРПОУ закладу. Наприклад: 01234567. Якщо код відсутній, вказати: null",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "dateProvided",
+                "title": "Дата виконання",
+                "description": "Дата виконання заявки (надання місця) у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2018-06-30",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "status",
+                "title": "Статус заявки",
+                "description": "Статус заявки. Наприклад: Чинна, Виконана, Скасована. Розпорядники також можуть використовувати власні статуси",
+                "datatype": "string",
+                "required": true
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}

@@ -1,0 +1,697 @@
+{
+    "context": {
+        "@context": "http://www.w3.org/ns/csvw",
+        "@language": "uk"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "uid",
+                "title": "Ідентифікатор проекту",
+                "description": "Унікальний ідентифікатор дорожнього проекту. Складається з ідентифікатора самого проекту та локального ідентифікатора",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "updatedDate",
+                "title": "Дата оновлення",
+                "description": "Дата останнього оновлення даних за проектом.",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "object",
+                "title": "Об'єкт робіт",
+                "description": "Вказується об’єкт робіт. Наприклад: дорога",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "roadId",
+                "title": "Індекс дороги",
+                "description": "Вказується індекс дороги. Наприклад: Т-21-11",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "roadKilometerMarker",
+                "title": "Кілометрова прив`язка",
+                "description": "Вказується кілометрова прив’язка проекту. Наприклад км 1 км + 200 - 2 км + 200",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "type",
+                "title": "Вид робіт",
+                "description": "Вказується вид робіт. Наприклад: Капітальний ремонт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "describtion",
+                "title": "Опис проекту",
+                "description": "Вказується короткий опис дорожнього проекту. Наприклад: забезпечення проїзду автомобільною дорогою, або забезпечення під`їзду до новозбудованої амбулаторії",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "roadCategory",
+                "title": "Категорія дороги",
+                "description": "Вказується категорія дороги. Наприклад: 3",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "roadType",
+                "title": "Значення дороги",
+                "description": "Вказується значення дороги. Наприклад: територіальна",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "streetCategory",
+                "title": "Категорія вулиці",
+                "description": "Вказується категорія вулиці. Наприклад: житлова вулиця",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "streetType",
+                "title": "Значення вулиці",
+                "description": "Вказується значення вулиці. Наприклад: загальноміська",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "length",
+                "title": "Протяжність ділянки ремонту (в км)",
+                "description": "Вказується протяжність ділянки дороги, яка підлягає ремонту. Одиниці виміру не зазначаються, протяжність вказується в кілометрах. Наприклад: 127.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "area",
+                "title": "Площа ділянки ремонту (м²)",
+                "description": "Вказується площа ділянки ремонту в м², одиниці виміру не зазначаються. Наприклад: 1 270 000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "CATUTTC",
+                "title": "Код КАТОТТГ",
+                "description": "Код КАТОТТГ адміністративної одиниці. Наприклад: UA32140050010021659",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL1",
+                "title": "Країна",
+                "description": "Назва держави. У колонці має бути зазначено: Україна.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL2",
+                "title": "Область",
+                "description": "Вказується область в якій проводиться ремонт.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "addressAdminUnitL3",
+                "title": "Район\t",
+                "description": "Вказується район в якому проводиться ремонт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "finalCost",
+                "title": "Остаточна вартість робіт за проектом (грн)",
+                "description": "Вказується остаточна вартість робіт за проектом в гривнях, одиниці виміру не зазначаються, значення не розділяються пробілами, в якості десяткового розділювача використовується крапка. Наприклад: 300000000.00",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "statusTime",
+                "title": "Статус проекту (поточний) відносно графіку виконання робіт",
+                "description": "Вказується поточний статус ремонту відповідно до графіку виконання робіт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "statusFin",
+                "title": "Статус проекту (поточний) відносно витрачених коштів (%)",
+                "description": "Вказуються поточний відсоток відносно витрачених коштів на проведення робіт, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 50.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "coatingType",
+                "title": "Тип покриття",
+                "description": "Вказується тип покриття дороги після ремонту. Наприклад: асфальтобетонне",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "warrantyPeriod",
+                "title": "Гарантійний термін покриття, років ",
+                "description": "Вказується гарантійний термін на покриття дороги у роках, одиниці виміру не зазначаються. Наприклад: 25.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "worksStartType",
+                "title": "Тип документу про початок робіт",
+                "description": "Вказується тип документу про початок робіт, наприклад: дозвіл на виконання будівельних робіт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "worksStartDate",
+                "title": "Дата документу про початок робіт",
+                "description": "Вказується дата документу про початок робіт у  форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "worksStartId",
+                "title": "Реєстраційний номер документу про початок робіт",
+                "description": "Вказується реєстраційний номер із системи e-construction. Наприклад: ІУ012211008854",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "objectClass",
+                "title": "Клас наслідків об`єкту",
+                "description": "Вказується клас наслідків об'єкта. Наприклад: СС2",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "permitUrl",
+                "title": "Посилання на e-construction",
+                "description": "Вказується посилання на інформацію про документи про початок робіт за об`єктом в системі e-construction. Посилання (URL) на декларацію про готовність об'єкту до експлуатації. Посилання повинні починатися з http:// або https://. Наприклад: https://e-construction.gov.ua/permits_doc_detail/2445124294569624799. У випадку кількох посилань розділити значення комами",
+                "datatype": "anyURL",
+                "required": true
+            },
+            {
+                "name": "permitText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "declarationDate",
+                "title": "Дата декларації про готовність об'єкту до експлуатації",
+                "description": "Дата декларації про готовність об’єкту до експлуатації у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "declarationNumber",
+                "title": "Номер декларації про готовність об'єкту до експлуатації",
+                "description": "Вказується номер екларації про готовність об’єкту до експлуатації. Наприклад: 2021-Т",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "declarationUrl",
+                "title": "Посилання на декларацію про готовність об'єкту до експлуатації",
+                "description": "Посилання (URL) на декларацію про готовність об'єкту до експлуатації. Посилання повинні починатися з http:// або https://. Наприклад: https://www.example.com/. У випадку кількох посилань розділити значення комами",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "declarationText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "acceptanceActDate",
+                "title": "Дата акту прийняття робіт",
+                "description": "Дата акту прийняття робіт у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "acceptanceActNumber",
+                "title": "Номер акту прийняття робіт",
+                "description": "Вказується номер акту прийняття робіт. Наприклад: 2021-ТН",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "acceptanceActUrl",
+                "title": "Посилання на акт прийняття робіт",
+                "description": "Посилання (URL) на акт прийняття робіт. Посилання повинні починатися з http:// або https://. Наприклад: https://www.example.com/. У випадку кількох посилань розділити значення комами",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "acceptanceActText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "qualityMonitoringDate",
+                "title": "Дата протоколу останнього проведеного моніторингу якості",
+                "description": "Вказується дата протоколу останнього проведеного моніторингу якості у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "qualityMonitoringNumber",
+                "title": "Номер протоколу останнього проведеного моніторингу якості",
+                "description": "Вказується номер протоколу останнього проведеного моніторингу якості. Наприклад: 2021-Я",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "qualityMonitoringUrl",
+                "title": "Протокол моніторингу якості (посилання)",
+                "description": "Посилання (URL) на протоколу останнього проведеного моніторингу якості. Посилання повинні починатися з http:// або https://. Наприклад: https://www.example.com/. У випадку кількох посилань розділити значення комами",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "qualityMonitoringText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "customerName",
+                "title": "Замовник Назва",
+                "description": "Вказується назва замовника на проведення робіт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "customerId",
+                "title": "Замовник ЄДРПОУ",
+                "description": "Вказується код ЄДРПОУ замовника проведення робіт. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "supervisorName",
+                "title": "Назва установи, яка здійснює технічний нагляд",
+                "description": "Вказується назва установи, яка здійснює технічний нагляд",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "supervisorId",
+                "title": "Код ЄДРПОУ установи, яка здійснює технічний нагляд",
+                "description": "Вказується код ЄДРПОУ установи, яка здійснює технічний нагляд. Наприклад: 01234567",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "supervisorPersonPosition",
+                "title": "Посада особи, яка здійснює технічний нагляд",
+                "description": "Вказується посада особи, яка здійснює технічний нагляд",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "supervisorPersonName",
+                "title": "Прізвище, ім’я та по батькові особи, яка здійснює технічний нагляд",
+                "description": "Вказується прізвище, ім’я, по батькові особи, яка здійснює технічний нагляд",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "supervisorSertificat",
+                "title": "Номер Сертифікату інженера технагляду, який здійснює нагляд",
+                "description": "Вказується номер сертифікату інженера технічного нагляду",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "approvDocName",
+                "title": "Назва документу, яким затверджено проведення робіт",
+                "description": "Вказується назва документу, яким затверджено проведення робіт. Наприклад: Постанова Кабінету Міністрів України",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "approvDocNumber",
+                "title": "Номер документу яким затверджено проведення робіт",
+                "description": "Вказується номер документу яким затверджено проведення робіт. Наприклад: 2020-Д",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "approvDocDate",
+                "title": "Дата документу яким затверджено проведення робіт",
+                "description": "Вказується дата документу яким затверджено проведення робіт у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "approvDocUrl",
+                "title": "Посилання на документ яким затверджено проведення робіт",
+                "description": "Посилання (URL) на документ яким затверджено проведення робіт. Посилання повинні починатися з http:// або https://. Наприклад: https://www.example.com/. У випадку кількох посилань розділити значення комами",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "approvDocText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "totalBudgetSum",
+                "title": "Загальна сума фінансування (грн)",
+                "description": "Вказується загальна сума фінансування в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "totalBudgetCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "stateBudgetSum",
+                "title": "Сума фінансування з Державного бюджету (грн)",
+                "description": "Вказується сума фінансування з Державного бюджету в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "stateBudgetCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "localBudgetSum",
+                "title": "Сума фінансування з Місцевого бюджету (грн)",
+                "description": "Вказується сума фінансування з Місцевого бюджету в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 0.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "localBudgetCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "SFRDSum",
+                "title": "Сума фінансування з Державного фонду реконструкції та розвитку",
+                "description": "Вказується сума фінансування з Державного фонду реконструкції та розвитку в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 0.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "SFRDCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "otherSources",
+                "title": "Інші джерела фінансування",
+                "description": "Вказуються інші джерела фінансування. Наприклад: Приватні інвестиції.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "otherSourcesSum",
+                "title": "Сума фінансування із інших джерел (грн)",
+                "description": "Вказується сума фінансування з інших джерел в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 100000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "otherSourcesCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "grafUrl",
+                "title": "Посилання на графічні матеріали",
+                "description": "Надаються посилання на супровідні графічні матеріали. Посилання повинні починатися з http:// або https://. Наприклад: https://www.example.com/. У випадку кількох посилань розділити значення комами. ",
+                "datatype": "anyURL",
+                "required": false
+            },
+            {
+                "name": "grafText",
+                "title": "Текст",
+                "description": "Вказується назва файлу із текстовим вмістом.",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "contractotName",
+                "title": "Назва організації Підрядника",
+                "description": "Вказується назва організація - виконавця робіт. ",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorId",
+                "title": "Код ЄДРПОУ організації Підрядника",
+                "description": "Вказується код ЄДРПОУ виконавця проведення робіт. Наприклад: 40148165",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorContractNumber",
+                "title": "Номер договору з Підрядником",
+                "description": "Вказується номер договору з Підрядником",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorContractDate",
+                "title": "Дата договору з Підрядником",
+                "description": "Вказується дата договору з Підрядником у  форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "contractSubject",
+                "title": "Предмет договору",
+                "description": "Вказується предмет договору із узагальненим обсягом робіт",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorContractCost",
+                "title": "Вартість договору з Підрядником",
+                "description": "Вказується вартість договору з Підрядником в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "contractorContractCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorContractPayment",
+                "title": "Оплата за договором",
+                "description": "Вказується сума проведеної оплати за договором в гривнях, станом на дату публікації набору, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "contractorContractPaymentCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorTenderId",
+                "title": "Ідентифікатор тендера Виконання робіт",
+                "description": "Вказується ID тендеру за яким проводилась закупівля виконання будівельних робіт (договір з Підрядником). Наприклад: 25e535cf7fab4faa85b0da5ea8252b43",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "contractorLitId",
+                "title": "Ідентифікатор лоту\nтендера Виконання робіт\n",
+                "description": "Якщо тендерна пропозиція розділена на кілька лотів - вказати ідентифікатор лоту за яким було обрано переможця. В іншому випадку вказується null. Наприклад: 1fca8c95f0614ddd9cf7ab50d3e4469c",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "projectorName",
+                "title": "Назва організації Проектанта",
+                "description": "Вказується назва організації, яка виконує проектно-кошторисну документацію",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectorId",
+                "title": "Код ЄДРПОУ організації Проектанта",
+                "description": "Вказується код ЄДРПОУ виконавця проектно-кошторисної документації. Дані реєстраційного номера облікової картки платника податків (далі — РНОКПП) фізичної особи-підприємця (далі — ФОП) знеособлюються",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectorContractNumber",
+                "title": "Номер договору з Проектантом",
+                "description": "Вказується номер договору з Проектантом",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectorContractDate",
+                "title": "Дата договору з Проектантом",
+                "description": "Вказується дата договору з Проектантом у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30.",
+                "datatype": "date",
+                "required": true
+            },
+            {
+                "name": "projectorContractSubject",
+                "title": "Предмет договору",
+                "description": "Вказується опис предмету договору із узагальненим обсягом робіт/послуг",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectorContractCost",
+                "title": "Вартість договору з Проектантом",
+                "description": "Вказується вартість договору з Проектантом в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "projectorContractCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectorContractPayment",
+                "title": "Оплата за договором",
+                "description": "Вказується сума проведеної оплати за договором в гривнях, станом на дату публікації набору, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": true
+            },
+            {
+                "name": "projectorContractPaymentCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectTenderId",
+                "title": "Ідентифікатор тендера виготовлення проектно-кошторисної документації",
+                "description": "Вказується ID тендеру за яким проводилась закупівля виконання проектних робіт (договір з Проектантом). Наприклад: 25e535cf7fab4faa85b0da5ea8252b43",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "projectLitId",
+                "title": "Ідентифікатор лоту\nтендера виготовлення проектно-кошторисної документації",
+                "description": "Якщо тендерна пропозиція розділена на кілька лотів - вказати ідентифікатор лоту за яким було обрано переможця. В іншому випадку вказується null. Наприклад: 1fca8c95f0614ddd9cf7ab50d3e4469c",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerName",
+                "title": "Назва організації Інженера",
+                "description": "Вказується назва організації, яка виконує функції інженера (технагляд, науковий супровід, контроль/моніторинг якості, випробування, обстеження, інші послуги за проектом в тому числі інженера-консультанта)",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerId",
+                "title": "Код ЄДРПОУ організації Інженера",
+                "description": "Вказується код ЄДРПОУ організації, яка виконує функції інженерного супроводу проекту. Дані РНОКПП ФОП знеособлюються",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerContractNumber",
+                "title": "Номер договору з Інженером",
+                "description": "Вказується номер договору з Інженером",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerContractDate",
+                "title": "Дата договору з Інженером",
+                "description": "Вказується дата договору з Інженером у форматі ISO 8601 (рррр-мм-дд). Наприклад: 2021-05-30.",
+                "datatype": "date",
+                "required": false
+            },
+            {
+                "name": "engineerContractSubject",
+                "title": "Предмет договору",
+                "description": "Вказується опис предмету договору, з узагальненим обсягом робіт",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerContractCost",
+                "title": "Вартість договору з Інженером",
+                "description": "Вказується вартість договору з Інженером в гривнях, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "engineerContractCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerContractPayment",
+                "title": "Оплата за договором",
+                "description": "Вказується сума проведеної оплати за договором в гривнях, станом на дату публікації набору, одиниці виміру не зазначаються, в якості десяткового роздільника використовується крапка. Наприклад: 3000000000.0",
+                "datatype": "decimal",
+                "required": false
+            },
+            {
+                "name": "engineerContractPaymentCurrency",
+                "title": "Код валюти",
+                "description": "Літерний код валюти, в якій вказана вартість відповідно до ДСТУ ISO 4217:2010. Наприклад: UAH",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerTenderId",
+                "title": "Ідентифікатор тендера Інженер",
+                "description": "Вказується ID тендеру за яким проводилась закупівля послуг Інженера (договір з Інженером). Наприклад: 25e535cf7fab4faa85b0da5ea8252b43",
+                "datatype": "string",
+                "required": false
+            },
+            {
+                "name": "engineerLitId",
+                "title": "Ідентифікатор лоту тендера на Інженера",
+                "description": "Якщо тендерна пропозиція розділена на кілька лотів - вказати ідентифікатор лоту за яким було обрано переможця. В іншому випадку вказується: null. Наприклад: 1fca8c95f0614ddd9cf7ab50d3e4469c",
+                "datatype": "string",
+                "required": false
+            }
+        ]
+    },
+    "primaryKey": "uid"
+}
